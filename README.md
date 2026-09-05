@@ -7,16 +7,22 @@
 </p>
 
 <p align="center">
-  <b>Customer Churn Analysis using SQL & MySQL</b>
+  <b>Analyzing Bank Customer Churn Using SQL & MySQL</b>
+</p>
+
+<p align="center">
+  A practical SQL project focused on customer behavior, churn patterns, segmentation, and retention insights.
 </p>
 
 ---
 
 ## 📌 Project Overview
 
-This project focuses on analyzing **customer churn in the banking sector using SQL and MySQL**.
+This project focuses on analyzing **bank customer churn using SQL and MySQL**.
 
-The main objective is to explore customer profiles, identify patterns associated with churn, analyze high-risk customer segments, and generate data-driven insights that can help improve customer retention.
+The objective is to explore customer characteristics, identify patterns associated with customer churn, analyze high-risk customer segments, and generate data-driven insights that can help a bank improve customer retention.
+
+The project follows a structured approach, starting with **basic data exploration** and gradually progressing toward **advanced SQL analysis and business case studies**.
 
 The dataset contains **10,000 customer records and 14 attributes** covering customer demographics, financial information, banking products, activity status, and churn status.
 
@@ -24,22 +30,40 @@ The dataset contains **10,000 customer records and 14 attributes** covering cust
 
 ## 🎯 Business Problem
 
-Customer churn is an important challenge for banks because losing existing customers can negatively impact revenue and long-term customer relationships.
+Customer churn is an important challenge for banks because losing existing customers can negatively affect long-term customer relationships and business performance.
 
-This project aims to answer key business questions such as:
+This project aims to answer questions such as:
 
 * Why are customers leaving the bank?
 * Which customer segments have a higher churn risk?
 * Does customer activity affect churn?
 * Does geography influence customer churn?
-* How do credit score, age, balance, salary, and number of products relate to churn?
+* How does age relate to customer churn?
+* Does credit score have an impact on churn?
+* How does account balance relate to churn?
+* Does the number of banking products affect customer retention?
 * Which customers should the bank prioritize for retention campaigns?
 
 ---
 
 ## 🗂️ Dataset
 
-The dataset contains customer-level banking information.
+The project uses a bank customer churn dataset containing customer demographic, financial, and banking-related information.
+
+### 📥 Download Dataset
+
+**[Download Churn_Bank.csv](dataset/Churn_Bank.csv)**
+
+### Dataset Information
+
+| Attribute     | Details          |
+| ------------- | ---------------- |
+| **File Name** | `Churn_Bank.csv` |
+| **Records**   | 10,000 customers |
+| **Columns**   | 14               |
+| **Format**    | CSV              |
+| **Database**  | MySQL            |
+| **SQL Table** | `churn_bank`     |
 
 ### Key Columns
 
@@ -62,8 +86,10 @@ The dataset contains customer-level banking information.
 ### Dataset Statistics
 
 * **Total Customers:** 10,000
-* **Columns:** 14
+* **Total Columns:** 14
 * **Geographies:** France, Germany, Spain
+* **Male Customers:** 5,457
+* **Female Customers:** 4,543
 * **Churned Customers:** 2,037
 * **Non-Churned Customers:** 7,963
 
@@ -71,60 +97,95 @@ The dataset contains customer-level banking information.
 
 ## 🛠️ Tools & Technologies
 
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
   <img src="https://img.shields.io/badge/SQL-Analysis-orange?style=flat-square" alt="SQL">
   <img src="https://img.shields.io/badge/GitHub-Version%20Control-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+  <img src="https://img.shields.io/badge/CSV-Dataset-lightgrey?style=flat-square" alt="CSV">
 </p>
+
+### Primary Tools
+
+* **MySQL** — Database management and SQL execution
+* **SQL** — Data exploration and analysis
+* **GitHub** — Project version control and documentation
+* **CSV** — Source dataset format
 
 ---
 
 ## 🧠 SQL Concepts Covered
 
-This project progressively covers SQL concepts from basic to advanced levels:
+This project progressively covers SQL concepts from beginner to advanced levels.
+
+### Basic SQL
 
 * `SELECT`
 * `WHERE`
 * `DISTINCT`
 * `ORDER BY`
 * `LIMIT`
-* Aggregate Functions
+
+### Aggregation
+
+* `COUNT()`
+* `SUM()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
 * `GROUP BY`
 * `HAVING`
+
+### Conditional Analysis
+
 * `CASE WHEN`
+* Customer segmentation
+* Risk categorization
+* Business-based filtering
+
+### Advanced SQL
+
 * Subqueries
+* Correlated Subqueries
 * Common Table Expressions (CTEs)
 * Window Functions
+* `ROW_NUMBER()`
 * `RANK()`
 * `DENSE_RANK()`
-* `ROW_NUMBER()`
 * `NTILE()`
 * `LAG()`
-* Customer Segmentation
-* Churn Analysis
-* Business Case Studies
+
+### Business Analysis
+
+* Customer churn analysis
+* High-risk customer identification
+* Customer segmentation
+* Retention analysis
+* Business case studies
 
 ---
 
-## 📊 Analysis Progress
+## 📊 Analysis Roadmap
 
-| Section | Analysis Topic                    | Status         |
-| ------- | --------------------------------- | -------------- |
-| 01      | Basic Data Exploration            | ✅ Completed    |
-| 02      | Filtering & Sorting               | 🔄 In Progress |
-| 03      | Aggregation & GROUP BY            | ⏳ Upcoming     |
-| 04      | HAVING & Business Filters         | ⏳ Upcoming     |
-| 05      | CASE WHEN & Customer Segmentation | ⏳ Upcoming     |
-| 06      | Churn Analysis                    | ⏳ Upcoming     |
-| 07      | Subqueries & CTEs                 | ⏳ Upcoming     |
-| 08      | Window Functions                  | ⏳ Upcoming     |
-| 09      | Business Case Studies             | ⏳ Upcoming     |
+The project is divided into **9 structured sections** containing a total of **160 SQL questions**.
+
+| Section   | Analysis Topic                    | Questions | Status         |
+| --------- | --------------------------------- | --------: | -------------- |
+| 01        | Basic Data Exploration            |        20 | ✅ Completed    |
+| 02        | Filtering & Sorting               |        20 | 🔄 In Progress |
+| 03        | Aggregation & GROUP BY            |        25 | ⏳ Upcoming     |
+| 04        | HAVING & Business Filters         |        20 | ⏳ Upcoming     |
+| 05        | CASE WHEN & Customer Segmentation |        20 | ⏳ Upcoming     |
+| 06        | Churn Analysis                    |        20 | ⏳ Upcoming     |
+| 07        | Subqueries & CTEs                 |        15 | ⏳ Upcoming     |
+| 08        | Window Functions                  |        12 | ⏳ Upcoming     |
+| 09        | Interview & Business Case Studies |         8 | ⏳ Upcoming     |
+| **Total** |                                   |   **160** |                |
 
 ---
 
 ## 🔎 Section 01 — Basic Data Exploration
 
-The first section contains **20 SQL queries** focused on understanding the structure and basic characteristics of the dataset.
+The first section focuses on understanding the structure and basic characteristics of the bank customer dataset.
 
 ### Analysis Performed
 
@@ -132,88 +193,179 @@ The first section contains **20 SQL queries** focused on understanding the struc
 * Unique customer count
 * Table structure and data types
 * Initial data inspection
-* Geography distribution
+* Number of different geographies
+* Geography-wise customer distribution
 * Gender distribution
-* Minimum and maximum age
+* Minimum and maximum customer age
 * Average customer age
-* Credit score analysis
-* Balance analysis
-* Estimated salary analysis
-* Number of products analysis
-* Credit card ownership
-* Active vs inactive customer analysis
+* Minimum and maximum credit score
+* Average credit score
+* Minimum and maximum customer balance
+* Average customer balance
+* Minimum and maximum estimated salary
+* Average estimated salary
+* Number of banking products
+* Customers with and without credit cards
+* Active and inactive customers
 
 ### SQL File
 
-📁 [`01_basic_data_exploration.sql`](sql/01_basic_data_exploration.sql)
+📁 **[View Section 01 — Basic Data Exploration](sql/01_basic_data_exploration.sql)**
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 Bank-Customer-Churn-SQL-Analysis/
 │
 ├── README.md
 │
+├── dataset/
+│   └── Churn_Bank.csv
+│
 └── sql/
     └── 01_basic_data_exploration.sql
 ```
 
-As the analysis progresses, additional SQL files will be added for each section.
+As the project progresses, additional SQL files will be added for each analysis section.
 
 ---
 
-## 💡 Expected Business Insights
+## 💡 Key Business Questions
 
-The complete analysis will investigate factors such as:
+The complete project will investigate questions such as:
 
-* Customer activity and churn
-* Geographic differences in churn
-* Product usage and churn
-* Customer age and churn
-* Credit score and churn
-* Balance and churn
-* Salary and churn
-* High-risk customer segments
-* Potential customer retention opportunities
+### Customer Profile
+
+* What is the overall customer demographic profile?
+* Which geographies have the most customers?
+* What is the average age and credit score of customers?
+
+### Customer Behavior
+
+* Are active customers less likely to churn?
+* Does the number of products influence customer retention?
+* Does credit card ownership have any relationship with churn?
+
+### Financial Characteristics
+
+* Does account balance influence churn?
+* Does estimated salary have a relationship with customer churn?
+* Are customers with certain credit score ranges more likely to leave?
+
+### Customer Segmentation
+
+* Which age groups are at higher risk?
+* Which geographic segments have higher churn?
+* Which product-usage segments are more likely to churn?
+* Which customer groups should be prioritized for retention?
 
 ---
 
-## 🚀 Project Goal
+## 📈 Expected Business Insights
 
-The final goal is to build a **complete SQL-based banking customer churn analysis** that moves beyond simple querying and demonstrates the ability to:
+The complete analysis will investigate potential relationships between customer churn and:
 
-1. Explore a real-world dataset
-2. Analyze customer behavior
-3. Identify churn patterns
-4. Segment customers based on risk
-5. Apply advanced SQL techniques
-6. Translate SQL results into business insights
-7. Recommend potential customer retention strategies
+* Customer age
+* Geography
+* Gender
+* Credit score
+* Account balance
+* Tenure
+* Number of banking products
+* Credit card ownership
+* Customer activity
+* Estimated salary
+
+The final analysis will be used to identify **high-risk customer segments** and potential opportunities for improving customer retention.
 
 ---
 
-## 📈 Project Status
+## 🚀 Project Goals
 
-**Current Progress:** Section 1 of 9 completed
+The main goal of this project is to demonstrate practical SQL and business analysis skills by:
+
+1. Exploring a real-world customer dataset
+2. Cleaning and understanding the available data
+3. Performing customer-level analysis
+4. Identifying churn patterns
+5. Segmenting customers based on business conditions
+6. Applying intermediate and advanced SQL techniques
+7. Solving SQL interview-style problems
+8. Converting SQL results into business insights
+9. Recommending potential customer retention strategies
+
+---
+
+## 📌 Project Status
+
+### Current Progress
+
+**Sections Completed:** 1 / 9
 
 **SQL Questions Completed:** 20 / 160
 
-**Next:** Filtering & Sorting
+**Current Section:** Section 02 — Filtering & Sorting
+
+### Progress
+
+```text
+Section 01  ████████████████████  100%
+Section 02  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 03  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 04  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 05  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 06  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 07  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 08  ░░░░░░░░░░░░░░░░░░░░   0%
+Section 09  ░░░░░░░░░░░░░░░░░░░░   0%
+```
+
+---
+
+## 📚 Learning Approach
+
+This project is designed as a **progressive SQL learning and portfolio project**.
+
+The analysis starts with basic SQL queries and gradually moves toward:
+
+**Basic SQL → Filtering → Aggregation → Business Analysis → Segmentation → Churn Analysis → Subqueries → CTEs → Window Functions → Case Studies**
+
+This approach helps demonstrate both **technical SQL skills** and the ability to apply SQL to real-world business problems.
+
+---
+
+## 🎯 Final Outcome
+
+By the end of this project, the repository will contain a complete collection of SQL analyses covering:
+
+* Data exploration
+* Customer profiling
+* Customer segmentation
+* Churn analysis
+* High-risk customer identification
+* Advanced SQL techniques
+* Interview-style SQL problems
+* Business case studies
+* Data-driven retention recommendations
 
 ---
 
 ## 👨‍💻 Author
 
-**Shubham Raj**
+### Shubham Raj
 
-B.Tech — Computer Science & Engineering (AI & Data Science)
+**B.Tech — Computer Science & Engineering (AI & Data Science)**
 
 Aspiring **Data Analyst | Data Engineer**
 
 ---
 
 <p align="center">
-  ⭐ If you find this project useful, consider giving it a star!
+  ⭐ <b>If you find this project useful, consider giving it a star!</b>
+</p>
+
+<p align="center">
+  Built with ❤️ using SQL & MySQL
 </p>
