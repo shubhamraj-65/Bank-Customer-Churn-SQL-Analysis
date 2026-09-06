@@ -168,18 +168,18 @@ This project progressively covers SQL concepts from beginner to advanced levels.
 
 The project is divided into **9 structured sections** containing a total of **160 SQL questions**.
 
-| Section   | Analysis Topic                    | Questions | Status         |
-| --------- | --------------------------------- | --------: | -------------- |
-| 01        | Basic Data Exploration            |        20 | ✅ Completed    |
-| 02        | Filtering & Sorting               |        20 | ✅ Completed    |
-| 03        | Aggregation & GROUP BY            |        25 | ⏳ Upcoming     |
-| 04        | HAVING & Business Filters         |        20 | ⏳ Upcoming     |
-| 05        | CASE WHEN & Customer Segmentation |        20 | ⏳ Upcoming     |
-| 06        | Churn Analysis                    |        20 | ⏳ Upcoming     |
-| 07        | Subqueries & CTEs                 |        15 | ⏳ Upcoming     |
-| 08        | Window Functions                  |        12 | ⏳ Upcoming     |
-| 09        | Interview & Business Case Studies |         8 | ⏳ Upcoming     |
-| **Total** |                                   |   **160** |                |
+| Section   | Analysis Topic                    | Questions | Status      |
+| --------- | --------------------------------- | --------: | ----------- |
+| 01        | Basic Data Exploration            |        20 | ✅ Completed |
+| 02        | Filtering & Sorting               |        20 | ✅ Completed |
+| 03        | Aggregation & GROUP BY            |        25 | ⏳ Upcoming  |
+| 04        | HAVING & Business Filters         |        20 | ⏳ Upcoming  |
+| 05        | CASE WHEN & Customer Segmentation |        20 | ⏳ Upcoming  |
+| 06        | Churn Analysis                    |        20 | ⏳ Upcoming  |
+| 07        | Subqueries & CTEs                 |        15 | ⏳ Upcoming  |
+| 08        | Window Functions                  |        12 | ⏳ Upcoming  |
+| 09        | Interview & Business Case Studies |         8 | ⏳ Upcoming  |
+| **Total** |                                   |   **160** |             |
 
 ---
 
@@ -214,6 +214,51 @@ The first section focuses on understanding the structure and basic characteristi
 
 ---
 
+## 🔎 Section 02 — Filtering & Sorting
+
+The second section focuses on filtering and sorting customer data using SQL conditions and ordering techniques.
+
+This section contains **20 SQL queries** designed to identify specific customer groups, filter customers based on business conditions, and rank customers based on different attributes.
+
+### Analysis Performed
+
+* Customers above a specific age
+* Customers with high credit scores
+* Customers with high account balances
+* Customers with higher estimated salaries
+* Customers from specific geographies
+* Female customers from France
+* Male customers from Germany
+* Customers within specific age ranges
+* Customers within specific credit score ranges
+* Customers within specific balance ranges
+* Customers with zero account balance
+* Customers without a credit card
+* Inactive customers
+* Customers using exactly two banking products
+* Customers sorted by age
+* Customers sorted by credit score
+* Top 10 customers with the highest balance
+* Top 10 customers with the highest estimated salary
+* Top 10 customers with the lowest credit scores
+
+### SQL Concepts Used
+
+* `WHERE`
+* Comparison Operators
+* `AND`
+* `BETWEEN`
+* `ORDER BY`
+* `ASC`
+* `DESC`
+* `LIMIT`
+
+### SQL File
+
+📁 **[View Section 02 — Filtering & Sorting](sql/02_filtering_and_sorting.sql)**
+
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -225,7 +270,8 @@ Bank-Customer-Churn-SQL-Analysis/
 │   └── Churn_Bank.csv
 │
 └── sql/
-    └── 01_basic_data_exploration.sql
+    ├── 01_basic_data_exploration.sql
+    └── 02_filtering_and_sorting.sql
 ```
 
 As the project progresses, additional SQL files will be added for each analysis section.
@@ -295,32 +341,6 @@ The main goal of this project is to demonstrate practical SQL and business analy
 7. Solving SQL interview-style problems
 8. Converting SQL results into business insights
 9. Recommending potential customer retention strategies
-
----
-
-## 📌 Project Status
-
-### Current Progress
-
-**Sections Completed:** 1 / 9
-
-**SQL Questions Completed:** 20 / 160
-
-**Current Section:** Section 02 — Filtering & Sorting
-
-### Progress
-
-```text
-Section 01  ████████████████████  100%
-Section 02  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 03  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 04  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 05  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 06  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 07  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 08  ░░░░░░░░░░░░░░░░░░░░   0%
-Section 09  ░░░░░░░░░░░░░░░░░░░░   0%
-```
 
 ---
 
