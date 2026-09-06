@@ -171,7 +171,7 @@ The project is divided into **9 structured sections** containing a total of **16
 | Section   | Analysis Topic                    | Questions | Status         |
 | --------- | --------------------------------- | --------: | -------------- |
 | 01        | Basic Data Exploration            |        20 | ✅ Completed    |
-| 02        | Filtering & Sorting               |        20 | 🔄 In Progress |
+| 02        | Filtering & Sorting               |        20 | ✅ Completed    |
 | 03        | Aggregation & GROUP BY            |        25 | ⏳ Upcoming     |
 | 04        | HAVING & Business Filters         |        20 | ⏳ Upcoming     |
 | 05        | CASE WHEN & Customer Segmentation |        20 | ⏳ Upcoming     |
