@@ -259,9 +259,63 @@ This section contains **20 SQL queries** designed to identify specific customer 
 
 ---
 
+---
+
+## 📊 Section 03 — Aggregation & GROUP BY
+
+The third section focuses on summarizing customer data using aggregate functions and `GROUP BY`.
+
+This section contains **25 SQL queries** designed to analyze customer distributions, calculate group-level averages, identify minimum and maximum values, and answer basic business questions across geography, gender, tenure, and product usage.
+
+### Analysis Performed
+
+* Customer count by geography
+* Customer count by gender
+* Average age by geography
+* Average credit score by geography
+* Average account balance by geography
+* Average estimated salary by geography
+* Average age by gender
+* Average credit score by gender
+* Average account balance by gender
+* Customer count by geography and gender
+* Active members by geography
+* Inactive members by geography
+* Credit card holders by geography
+* Average number of products by geography
+* Maximum balance by geography
+* Minimum balance by geography
+* Maximum salary by gender
+* Minimum salary by gender
+* Average salary by gender
+* Customer count by tenure
+* Average balance by number of products
+* Average salary by number of products
+* Average age by number of products
+* Geography with the highest number of customers
+* Geography with the highest average balance
+
+### SQL Concepts Used
+
+* `COUNT()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
+* `ROUND()`
+* `GROUP BY`
+* `ORDER BY`
+* `LIMIT`
+* Aggregate functions with multiple grouping columns
+
+### SQL File
+
+📁 **[View Section 03 — Aggregation & GROUP BY](sql/03_aggregation_and_group_by.sql)**
+
+
 ## 📂 Project Structure
 
 ```text
+
 Bank-Customer-Churn-SQL-Analysis/
 │
 ├── README.md
@@ -271,7 +325,9 @@ Bank-Customer-Churn-SQL-Analysis/
 │
 └── sql/
     ├── 01_basic_data_exploration.sql
-    └── 02_filtering_and_sorting.sql
+    ├── 02_filtering_and_sorting.sql
+    └── 03_aggregation_and_group_by.sql
+
 ```
 
 As the project progresses, additional SQL files will be added for each analysis section.
