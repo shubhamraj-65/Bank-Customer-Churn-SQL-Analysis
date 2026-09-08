@@ -257,7 +257,6 @@ This section contains **20 SQL queries** designed to identify specific customer 
 
 📁 **[View Section 02 — Filtering & Sorting](sql/02_filtering_and_sorting.sql)**
 
----
 
 ---
 
@@ -310,6 +309,54 @@ This section contains **25 SQL queries** designed to analyze customer distributi
 ### SQL File
 
 📁 **[View Section 03 — Aggregation & GROUP BY](sql/03_aggregation_and_group_by.sql)**
+
+---
+
+## 🔎 Section 04 — HAVING + Business Filters
+
+The fourth section focuses on filtering grouped results using `HAVING` and applying SQL to practical business questions.
+
+This section contains **20 SQL queries** that analyze customer groups based on geography, gender, product usage, tenure, activity status, credit-card ownership, salary, balance, and customer count.
+
+### Analysis Performed
+
+* Identified geographies with more than 3,000 customers
+* Identified geographies with an average balance above 100,000
+* Identified geographies with an average credit score above 650
+* Identified product categories with more than 500 customers
+* Identified tenure groups with more than 1,000 customers
+* Identified geographies with an average salary above 100,000
+* Identified gender groups with an average age above 39
+* Identified Geography and Gender groups with more than 1,000 customers
+* Identified product groups with an average balance above 80,000
+* Identified geographies with a maximum balance above 235,000
+* Identified geographies with a minimum balance of 0
+* Identified geographies with more than 1,300 active customers
+* Identified geographies with more than 1,200 inactive customers
+* Identified geographies with more than 700 credit-card holders
+* Identified geographies with average age above 38 and average balance above 80,000
+* Identified product groups with an average salary above 100,000
+* Identified tenure groups with an average balance above 77,000
+* Identified the gender with the highest average salary
+* Identified the geography with the highest customer count
+* Identified geographies with more than 2,500 customers along with their average salary
+
+### SQL Concepts Used
+
+* `HAVING`
+* `GROUP BY`
+* `COUNT()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
+* `WHERE`
+* `ORDER BY`
+* `LIMIT`
+* Multiple aggregate conditions
+
+### SQL File
+
+📁 **[View Section 04 — HAVING + Business Filters](sql/04_having_and_business_filters.sql)**
 
 
 ## 📂 Project Structure
