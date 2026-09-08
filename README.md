@@ -173,7 +173,7 @@ The project is divided into **9 structured sections** containing a total of **16
 | 01        | Basic Data Exploration            |        20 | ✅ Completed |
 | 02        | Filtering & Sorting               |        20 | ✅ Completed |
 | 03        | Aggregation & GROUP BY            |        25 | ✅ Completed |
-| 04        | HAVING & Business Filters         |        20 | ⏳ Upcoming  |
+| 04        | HAVING & Business Filters         |        20 | ✅ Completed |
 | 05        | CASE WHEN & Customer Segmentation |        20 | ⏳ Upcoming  |
 | 06        | Churn Analysis                    |        20 | ⏳ Upcoming  |
 | 07        | Subqueries & CTEs                 |        15 | ⏳ Upcoming  |
