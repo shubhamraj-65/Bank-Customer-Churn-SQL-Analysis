@@ -1,4 +1,3 @@
-```sql
 -- =====================================================
 -- BANK CUSTOMER CHURN ANALYSIS
 -- Section 04: HAVING + Business Filters
@@ -183,5 +182,5 @@ SELECT Geography,
 FROM churn_bank
 GROUP BY Geography
 HAVING COUNT(*) > 2500;
-```
+
 
