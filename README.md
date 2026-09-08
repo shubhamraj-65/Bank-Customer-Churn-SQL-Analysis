@@ -326,7 +326,9 @@ Bank-Customer-Churn-SQL-Analysis/
 └── sql/
     ├── 01_basic_data_exploration.sql
     ├── 02_filtering_and_sorting.sql
-    └── 03_aggregation_and_group_by.sql
+    ├── 03_aggregation_and_group_by.sql
+    └── 04_having_and_business_filters.sql
+
 
 ```
 
