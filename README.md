@@ -359,6 +359,54 @@ This section contains **20 SQL queries** that analyze customer groups based on g
 📁 **[View Section 04 — HAVING + Business Filters](sql/04_having_and_business_filters.sql)**
 
 
+---
+
+## 🧩 Section 05 — CASE WHEN & Customer Segmentation
+
+The fifth section focuses on using `CASE WHEN` to create meaningful customer segments and analyze churn behavior across different customer categories.
+
+This section contains **20 SQL queries** covering age, credit score, balance, salary, product usage, activity status, credit-card ownership, and churn risk.
+
+### Analysis Performed
+
+* Segmented customers based on age
+* Classified customers based on credit score
+* Segmented customers based on account balance
+* Classified customers based on estimated salary
+* Created low-risk and high-risk customer categories
+* Segmented customers based on number of products
+* Converted activity status into readable categories
+* Converted credit-card ownership into readable categories
+* Calculated customer count by age segment
+* Calculated customer count by credit-score segment
+* Calculated customer count by balance segment
+* Calculated customer count by salary segment
+* Calculated churn rate by age segment
+* Calculated churn rate by credit-score segment
+* Calculated churn rate by balance segment
+* Calculated churn rate by salary segment
+* Identified customers with high balance and high salary
+* Identified customers with low credit score and high balance
+* Identified senior and inactive customers
+* Created a high-risk customer segment using age, activity status, and churn status
+
+### SQL Concepts Used
+
+* `CASE WHEN`
+* `COUNT()`
+* `AVG()`
+* `GROUP BY`
+* Conditional segmentation
+* Customer classification
+* Churn rate calculation
+* Multiple conditions using `AND`
+* Business-oriented customer segmentation
+
+### SQL File
+
+📁 **[View Section 05 — CASE WHEN & Customer Segmentation](sql/05_case_when_customer_segmentation.sql)**
+
+
 ## 📂 Project Structure
 
 ```text
