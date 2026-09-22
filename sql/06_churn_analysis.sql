@@ -44,3 +44,7 @@ where HasCrCard=0;
 select numofproducts,avg(exited) * 100 as churn_rate 
 from churn_bank
 group by NumOfProducts;
+
+-- 10. Tenure-wise churn rate nikalo.
+select tenure,avg(exited) * 100 as churn_rate from churn_bank
+group by Tenure;
