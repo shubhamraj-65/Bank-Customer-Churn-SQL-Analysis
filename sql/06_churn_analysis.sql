@@ -15,3 +15,7 @@ FROM churn_bank;
 select geography,count(*) as geo_churned from churn_bank
 where Exited=1
 group by Geography;
+
+-- 5. Geography-wise churn rate nikalo.
+select geography,avg(exited) *100 as churn_rate from churn_bank
+group by Geography;
