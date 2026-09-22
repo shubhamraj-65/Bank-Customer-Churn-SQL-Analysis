@@ -19,3 +19,8 @@ group by Geography;
 -- 5. Geography-wise churn rate nikalo.
 select geography,avg(exited) *100 as churn_rate from churn_bank
 group by Geography;
+
+-- 6. Gender-wise churn rate nikalo.
+select gender,avg(exited) * 100 as churn_rate 
+from churn_bank
+group by Gender;
