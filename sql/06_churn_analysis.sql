@@ -53,3 +53,8 @@ group by Tenure;
 select age,avg(exited) * 100 as churn_rate 
 from churn_bank 
 group by age;
+
+-- 12. Credit-score-wise churn rate nikalo.
+select CreditScore,avg(exited) * 100 as churn_rate 
+from churn_bank
+group by CreditScore;
