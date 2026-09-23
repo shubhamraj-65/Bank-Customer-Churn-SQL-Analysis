@@ -37,6 +37,46 @@ FROM churn_bank
 GROUP BY Geography;
 
 
+-- 6. Calculate the churn rate by gender.
+SELECT
+    Gender,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY Gender;
+
+
+-- 7. Compare the churn rate of active vs inactive members.
+SELECT
+    IsActiveMember,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY IsActiveMember;
+
+
+-- 8. Compare the churn rate of credit-card holders vs non-holders.
+SELECT
+    HasCrCard,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY HasCrCard;
+
+
+-- 9. Calculate the churn rate by number of products.
+SELECT
+    NumOfProducts,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY NumOfProducts;
+
+
+-- 10. Calculate the churn rate by tenure.
+SELECT
+    Tenure,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY Tenure;
+
+
 
 
 
