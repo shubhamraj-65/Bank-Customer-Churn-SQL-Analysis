@@ -27,9 +27,6 @@ group by NumOfProducts;
 select tenure,avg(exited) * 100 as churn_rate from churn_bank
 group by Tenure;
 
--- 11. Age-wise churn rate nikalo.
-select age,avg(exited) * 100 as churn_rate 
-from churn_bank 
-group by age;
+
 
 
