@@ -18,10 +18,6 @@ select avg(exited) * 100 as churn_rate from
 churn_bank
 where HasCrCard=0;
 
--- 9. Product-wise churn rate nikalo.
-select numofproducts,avg(exited) * 100 as churn_rate 
-from churn_bank
-group by NumOfProducts;
 
 
 
