@@ -77,6 +77,45 @@ FROM churn_bank
 GROUP BY Tenure;
 
 
+-- 11. Calculate the churn rate by age.
+SELECT
+    Age,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY Age;
+
+
+-- 12. Calculate the churn rate by credit score.
+SELECT
+    CreditScore,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY CreditScore;
+
+
+-- 13. Calculate the churn rate by balance segment.
+SELECT
+    CASE
+        WHEN Balance = 0 THEN 'Zero Balance'
+        WHEN Balance < 20000 THEN 'Low Balance'
+        WHEN Balance <= 80000 THEN 'Medium Balance'
+        ELSE 'High Balance'
+    END AS balance_segment,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY balance_segment;
+
+
+-- 14. Calculate the churn rate by salary segment.
+SELECT
+    CASE
+        WHEN EstimatedSalary <= 30000 THEN 'Low Salary'
+        WHEN EstimatedSalary <= 80000 THEN 'Medium Salary'
+        ELSE 'High Salary'
+    END AS salary_segment,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY salary_segment;
 
 
 
