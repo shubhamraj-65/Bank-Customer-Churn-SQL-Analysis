@@ -406,6 +406,56 @@ This section contains **20 SQL queries** covering age, credit score, balance, sa
 
 📁 **[View Section 05 — CASE WHEN & Customer Segmentation](sql/05_case_when_customer_segmentation.sql)**
 
+---
+
+## 📉 Section 06 — Churn Analysis
+
+The sixth section focuses on analyzing **customer churn patterns** and identifying customer groups with higher churn rates.
+
+This section contains **20 SQL queries** that analyze churn based on geography, gender, customer activity, credit-card ownership, number of products, tenure, age, credit score, balance, salary, and customer status.
+
+### Analysis Performed
+
+* Calculated the total number of churned customers
+* Calculated the total number of non-churned customers
+* Calculated the overall customer churn rate
+* Analyzed churned customers by geography
+* Calculated geography-wise churn rates
+* Calculated gender-wise churn rates
+* Compared churn rates between active and inactive members
+* Compared churn rates between credit-card holders and non-holders
+* Calculated churn rates by number of banking products
+* Calculated churn rates by customer tenure
+* Calculated churn rates by customer age
+* Calculated churn rates by credit score
+* Calculated churn rates across balance segments
+* Calculated churn rates across salary segments
+* Identified the geography with the highest churn rate
+* Identified the product count with the highest churn rate
+* Checked whether inactive members have a higher churn rate than active members
+* Compared churn rates of customers with and without credit cards
+* Calculated the average balance of churned customers in Germany
+* Compared the average credit score of churned and non-churned customers
+
+### SQL Concepts Used
+
+* `COUNT()`
+* `AVG()`
+* `CASE WHEN`
+* `WHERE`
+* `GROUP BY`
+* `ORDER BY`
+* `LIMIT`
+* Conditional aggregation
+* Churn rate calculation
+* Customer segmentation
+* Business-based comparison
+* Aggregate functions
+
+### SQL File
+
+📁 **[View Section 06 — Churn Analysis](sql/06_churn_analysis.sql)**
+
 
 ## 📂 Project Structure
 
