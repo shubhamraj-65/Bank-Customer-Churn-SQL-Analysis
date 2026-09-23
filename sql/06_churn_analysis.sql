@@ -118,6 +118,61 @@ FROM churn_bank
 GROUP BY salary_segment;
 
 
+-- 15. Find the geography with the highest churn rate.
+SELECT
+    Geography,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY Geography
+ORDER BY churn_rate DESC
+LIMIT 1;
+
+
+-- 16. Find the product count with the highest churn rate.
+SELECT
+    NumOfProducts,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY NumOfProducts
+ORDER BY churn_rate DESC
+LIMIT 1;
+
+
+-- 17. Check whether inactive members have a higher churn rate than active members.
+SELECT
+    CASE
+        WHEN AVG(CASE WHEN IsActiveMember = 0 THEN Exited END)
+           > AVG(CASE WHEN IsActiveMember = 1 THEN Exited END)
+        THEN 'Yes'
+        ELSE 'No'
+    END AS inactive_churn_higher
+FROM churn_bank;
+
+
+-- 18. Compare the churn rate of customers with and without a credit card.
+SELECT
+    HasCrCard,
+    AVG(Exited) * 100 AS churn_rate
+FROM churn_bank
+GROUP BY HasCrCard;
+
+
+-- 19. Find the average balance of churned customers in Germany.
+SELECT
+    AVG(Balance) AS avg_balance
+FROM churn_bank
+WHERE Geography = 'Germany'
+  AND Exited = 1;
+
+
+-- 20. Compare the average credit score of churned vs non-churned customers.
+SELECT
+    Exited,
+    AVG(CreditScore) AS avg_credit_score
+FROM churn_bank
+GROUP BY Exited;
+
+
 
 
 
