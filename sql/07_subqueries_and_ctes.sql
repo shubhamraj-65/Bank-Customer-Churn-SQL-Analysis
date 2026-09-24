@@ -18,3 +18,6 @@ WHERE c.Geography = cs.Geography );
 -- 5. Find customers whose salary is above the average salary of their Geography. 
 SELECT * FROM churn_bank AS c WHERE EstimatedSalary > ( SELECT AVG(EstimatedSalary) FROM churn_bank AS cs 
 WHERE c.Geography = cs.Geography );
+
+-- 6. Find customers whose age is above the overall average age. 
+SELECT * FROM churn_bank WHERE Age > ( SELECT AVG(Age) FROM churn_bank );
