@@ -44,3 +44,7 @@ WHERE c.Geography = cs.Geography );
 -- 12. Find customer(s) with the highest credit score in each Geography. 
 SELECT * FROM churn_bank AS c WHERE CreditScore = ( SELECT MAX(CreditScore) FROM churn_bank AS cs 
 WHERE c.Geography = cs.Geography );
+
+-- 13. Calculate the churn rate by Geography using a CTE. 
+WITH churn_by_geo AS ( SELECT Geography, AVG(Exited) * 100 AS churn_rate FROM churn_bank
+GROUP BY Geography ) SELECT * FROM churn_by_geo;
