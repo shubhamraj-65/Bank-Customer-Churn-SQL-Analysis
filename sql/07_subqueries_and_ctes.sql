@@ -14,3 +14,7 @@ SELECT * FROM churn_bank WHERE CreditScore < ( SELECT AVG(CreditScore) FROM chur
 -- 4. Find customers whose balance is above the average balance of their Geography. 
 SELECT * FROM churn_bank AS c WHERE Balance > ( SELECT AVG(Balance) FROM churn_bank AS cs
 WHERE c.Geography = cs.Geography );
+
+-- 5. Find customers whose salary is above the average salary of their Geography. 
+SELECT * FROM churn_bank AS c WHERE EstimatedSalary > ( SELECT AVG(EstimatedSalary) FROM churn_bank AS cs 
+WHERE c.Geography = cs.Geography );
