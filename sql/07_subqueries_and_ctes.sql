@@ -48,3 +48,9 @@ WHERE c.Geography = cs.Geography );
 -- 13. Calculate the churn rate by Geography using a CTE. 
 WITH churn_by_geo AS ( SELECT Geography, AVG(Exited) * 100 AS churn_rate FROM churn_bank
 GROUP BY Geography ) SELECT * FROM churn_by_geo;
+
+-- 14. Find high-risk customers using a CTE. -- Business rule: customers with balance below 5,000 are classified as high-risk.
+WITH risked_customer AS 
+  ( SELECT *, CASE WHEN Balance < 5000 THEN 'high_risk' WHEN Balance >= 5000 AND
+  Balance <= 50000 THEN 'low_risk' ELSE 'not_risk' END AS risk_segment FROM churn_bank )
+  SELECT * FROM risked_customer WHERE risk_segment = 'high_risk';
