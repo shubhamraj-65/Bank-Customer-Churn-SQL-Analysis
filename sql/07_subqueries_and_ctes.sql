@@ -31,3 +31,7 @@ ORDER BY Balance DESC LIMIT 1 OFFSET 1 );
 
 -- 9. Find customer(s) with the highest credit score.
 SELECT * FROM churn_bank WHERE CreditScore = ( SELECT MAX(CreditScore) FROM churn_bank );
+
+-- 10. Find customer(s) with the highest balance in each Geography. 
+SELECT * FROM churn_bank AS c WHERE Balance = ( SELECT MAX(Balance) FROM churn_bank AS cs
+WHERE c.Geography = cs.Geography );
