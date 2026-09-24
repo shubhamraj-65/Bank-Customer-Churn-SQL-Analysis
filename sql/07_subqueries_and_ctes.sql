@@ -35,3 +35,8 @@ SELECT * FROM churn_bank WHERE CreditScore = ( SELECT MAX(CreditScore) FROM chur
 -- 10. Find customer(s) with the highest balance in each Geography. 
 SELECT * FROM churn_bank AS c WHERE Balance = ( SELECT MAX(Balance) FROM churn_bank AS cs
 WHERE c.Geography = cs.Geography );
+
+
+-- 11. Find customer(s) with the lowest balance in each Geography.
+SELECT * FROM churn_bank AS c WHERE Balance = ( SELECT MIN(Balance) FROM churn_bank AS cs 
+WHERE c.Geography = cs.Geography );
