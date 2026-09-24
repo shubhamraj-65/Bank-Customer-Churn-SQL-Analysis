@@ -28,3 +28,6 @@ SELECT * FROM churn_bank WHERE Balance = ( SELECT MAX(Balance) AS highest_balanc
 -- 8. Find customer(s) with the second-highest distinct balance. 
 SELECT * FROM churn_bank WHERE Balance = ( SELECT DISTINCT Balance FROM churn_bank 
 ORDER BY Balance DESC LIMIT 1 OFFSET 1 );
+
+-- 9. Find customer(s) with the highest credit score.
+SELECT * FROM churn_bank WHERE CreditScore = ( SELECT MAX(CreditScore) FROM churn_bank );
