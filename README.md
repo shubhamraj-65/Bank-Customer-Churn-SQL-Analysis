@@ -475,6 +475,7 @@ Bank-Customer-Churn-SQL-Analysis/
     └── 04_having_and_business_filters.sql
     └── 05_case_when_customer_segmentation.sql
     └── 06_churn_analysis.sql
+    └── 07_subqueries_and_ctes.sql
 
 
 ```
