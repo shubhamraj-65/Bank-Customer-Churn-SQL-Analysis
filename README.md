@@ -456,6 +456,56 @@ This section contains **20 SQL queries** that analyze churn based on geography, 
 
 📁 **[View Section 06 — Churn Analysis](sql/06_churn_analysis.sql)**
 
+## 🔍 Section 07 — Subqueries & CTEs
+
+The seventh section focuses on using **subqueries and Common Table Expressions (CTEs)** to perform advanced customer-level analysis and compare individual customers against overall and geography-level benchmarks.
+
+This section contains **15 SQL queries** that analyze customer balances, salaries, credit scores, age, geography-level benchmarks, highest and lowest customer values, churn rates, and customer risk segments.
+
+### Analysis Performed
+
+* Identified customers whose balance is above the overall average balance
+* Identified customers whose salary is above the overall average salary
+* Identified customers whose credit score is below the overall average credit score
+* Compared customer balances with the average balance of their respective geography
+* Compared customer salaries with the average salary of their respective geography
+* Identified customers whose age is above the overall average age
+* Identified customers with the highest balance
+* Identified customers with the second-highest distinct balance
+* Identified customers with the highest credit score
+* Identified customers with the highest balance within each geography
+* Identified customers with the lowest balance within each geography
+* Identified customers with the highest credit score within each geography
+* Calculated geography-wise churn rates using a Common Table Expression (CTE)
+* Classified customers into risk segments based on their account balance
+* Calculated the percentage of customers whose balance is above the overall average balance
+
+### SQL Concepts Used
+
+* `SELECT`
+* `WHERE`
+* `AVG()`
+* `MAX()`
+* `MIN()`
+* `COUNT()`
+* `ORDER BY`
+* `LIMIT`
+* `OFFSET`
+* Scalar subqueries
+* Correlated subqueries
+* Common Table Expressions (CTEs)
+* `WITH`
+* `CROSS JOIN`
+* `CASE WHEN`
+* Customer benchmarking
+* Customer risk segmentation
+* Geography-level comparison
+* Aggregate functions
+
+### SQL File
+
+📁 **[View Section 07 — Subqueries & CTEs](sql/07_subqueries_and_ctes.sql)**
+
 
 ## 📂 Project Structure
 
