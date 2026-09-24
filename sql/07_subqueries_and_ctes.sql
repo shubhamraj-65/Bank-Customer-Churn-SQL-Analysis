@@ -24,3 +24,7 @@ SELECT * FROM churn_bank WHERE Age > ( SELECT AVG(Age) FROM churn_bank );
 
 -- 7. Find customer(s) with the highest balance. 
 SELECT * FROM churn_bank WHERE Balance = ( SELECT MAX(Balance) AS highest_balance FROM churn_bank );
+
+-- 8. Find customer(s) with the second-highest distinct balance. 
+SELECT * FROM churn_bank WHERE Balance = ( SELECT DISTINCT Balance FROM churn_bank 
+ORDER BY Balance DESC LIMIT 1 OFFSET 1 );
