@@ -54,3 +54,11 @@ WITH risked_customer AS
   ( SELECT *, CASE WHEN Balance < 5000 THEN 'high_risk' WHEN Balance >= 5000 AND
   Balance <= 50000 THEN 'low_risk' ELSE 'not_risk' END AS risk_segment FROM churn_bank )
   SELECT * FROM risked_customer WHERE risk_segment = 'high_risk';
+
+
+-- 15. Calculate the percentage of customers whose balance is above -- the overall average balance using CTEs. 
+WITH avg_balance AS ( SELECT AVG(Balance) AS avg_bal FROM churn_bank ), 
+  above_average AS ( SELECT COUNT(*) AS customers_above_avg 
+  FROM churn_bank CROSS JOIN avg_balance WHERE Balance > avg_bal ) 
+  SELECT customers_above_avg * 100.0 / (SELECT COUNT(*) FROM churn_bank) AS percentage_above_avg 
+  FROM above_average;
