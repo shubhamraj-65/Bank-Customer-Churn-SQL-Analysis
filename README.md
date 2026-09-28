@@ -526,6 +526,7 @@ Bank-Customer-Churn-SQL-Analysis/
     └── 05_case_when_customer_segmentation.sql
     └── 06_churn_analysis.sql
     └── 07_subqueries_and_ctes.sql
+    └── 08_window_functions.sql
 
 
 ```
