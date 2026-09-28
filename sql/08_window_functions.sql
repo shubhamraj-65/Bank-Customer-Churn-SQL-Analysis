@@ -147,3 +147,20 @@ SELECT
         ORDER BY Balance
     ) AS balance_group
 FROM churn_bank;
+
+-- 12. Calculate the difference between each customer's balance
+-- and the previous lower balance customer within the same Geography
+-- using LAG().
+SELECT
+    CustomerId,
+    Geography,
+    Balance,
+    LAG(Balance) OVER(
+        PARTITION BY Geography
+        ORDER BY Balance ASC
+    ) AS previous_balance,
+    Balance - LAG(Balance) OVER(
+        PARTITION BY Geography
+        ORDER BY Balance ASC
+    ) AS balance_difference
+FROM churn_bank;
