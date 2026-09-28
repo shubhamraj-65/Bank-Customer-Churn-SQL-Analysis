@@ -107,3 +107,15 @@ SELECT
         PARTITION BY Geography
     ) AS avg_balance
 FROM churn_bank;
+
+-- 9. Show each customer's credit score along with the average
+-- credit score of their Geography.
+SELECT
+    CustomerId,
+    Geography,
+    Age,
+    CreditScore,
+    AVG(CreditScore) OVER(
+        PARTITION BY Geography
+    ) AS avg_credit_score
+FROM churn_bank;
