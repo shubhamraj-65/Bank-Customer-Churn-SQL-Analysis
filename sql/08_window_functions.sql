@@ -68,3 +68,16 @@ FROM (
     FROM churn_bank
 ) AS ranked_customers
 WHERE ranked = 2;
+
+-- 6. Find customers with the highest salary in each Geography using DENSE_RANK().
+SELECT *
+FROM (
+    SELECT
+        *,
+        DENSE_RANK() OVER(
+            PARTITION BY Geography
+            ORDER BY EstimatedSalary DESC
+        ) AS ranked
+    FROM churn_bank
+) AS ranked_customers
+WHERE ranked = 1;
