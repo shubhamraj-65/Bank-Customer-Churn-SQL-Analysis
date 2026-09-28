@@ -538,7 +538,7 @@ This section contains **15 SQL queries** that analyze customer balances, salarie
 * Customer Segmentation
 
 ### SQL File
-📁 **[View Section 08 — Subqueries & CTEs](sql/08_window_functions.sql)**
+📁 **[View Section 08 — Windows Functions](sql/08_window_functions.sql)**
   
 
 ## 📂 Project Structure
