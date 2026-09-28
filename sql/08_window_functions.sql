@@ -81,3 +81,17 @@ FROM (
     FROM churn_bank
 ) AS ranked_customers
 WHERE ranked = 1;
+
+-- 7. Find the first customer in each Geography based on highest balance
+-- using ROW_NUMBER().
+SELECT *
+FROM (
+    SELECT
+        *,
+        ROW_NUMBER() OVER(
+            PARTITION BY Geography
+            ORDER BY Balance DESC
+        ) AS row_num
+    FROM churn_bank
+) AS ranked_customers
+WHERE row_num = 1;
