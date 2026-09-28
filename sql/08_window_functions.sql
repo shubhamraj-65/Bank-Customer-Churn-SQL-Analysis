@@ -55,3 +55,16 @@ SELECT *
 FROM credit_rank
 WHERE row_num <= 3;
 
+
+-- 5. Find the second-highest balance customer in each Geography.
+SELECT *
+FROM (
+    SELECT
+        *,
+        DENSE_RANK() OVER(
+            PARTITION BY Geography
+            ORDER BY Balance DESC
+        ) AS ranked
+    FROM churn_bank
+) AS ranked_customers
+WHERE ranked = 2;
