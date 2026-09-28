@@ -28,3 +28,15 @@ WITH credit_rank AS (
 SELECT *
 FROM credit_rank;
 
+-- 3. Find the top 3 customers with the highest balance in each Geography.
+SELECT *
+FROM (
+    SELECT
+        *,
+        ROW_NUMBER() OVER(
+            PARTITION BY Geography
+            ORDER BY Balance DESC
+        ) AS row_num
+    FROM churn_bank
+) AS ranked_customers
+WHERE row_num <= 3;
