@@ -119,3 +119,18 @@ SELECT
         PARTITION BY Geography
     ) AS avg_credit_score
 FROM churn_bank;
+
+-- 10. Calculate the difference between each customer's balance
+-- and the average balance of their Geography.
+SELECT
+    CustomerId,
+    Geography,
+    Age,
+    Balance,
+    AVG(Balance) OVER(
+        PARTITION BY Geography
+    ) AS avg_balance,
+    Balance - AVG(Balance) OVER(
+        PARTITION BY Geography
+    ) AS balance_difference
+FROM churn_bank;
