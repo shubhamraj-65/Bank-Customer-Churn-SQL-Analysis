@@ -95,3 +95,15 @@ FROM (
     FROM churn_bank
 ) AS ranked_customers
 WHERE row_num = 1;
+
+-- 8. Show each customer's balance along with the average balance
+-- of their Geography.
+SELECT
+    CustomerId,
+    Geography,
+    Age,
+    Balance,
+    AVG(Balance) OVER(
+        PARTITION BY Geography
+    ) AS avg_balance
+FROM churn_bank;
