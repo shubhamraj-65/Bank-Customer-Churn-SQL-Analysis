@@ -506,6 +506,40 @@ This section contains **15 SQL queries** that analyze customer balances, salarie
 
 📁 **[View Section 07 — Subqueries & CTEs](sql/07_subqueries_and_ctes.sql)**
 
+### Analysis Performed
+
+* Ranked customers within each Geography based on account balance
+* Ranked customers within each Geography based on credit score
+* Identified the top 3 customers with the highest balance in each Geography
+* Identified the top 3 customers with the highest credit score in each Geography
+* Identified the second-highest balance customers within each Geography
+* Identified customers with the highest salary in each Geography
+* Identified the highest-balance customer in each Geography using `ROW_NUMBER()`
+* Compared each customer's balance with the average balance of their Geography
+* Compared each customer's credit score with the average credit score of their Geography
+* Calculated the difference between each customer's balance and the Geography-wise average balance
+* Divided customers within each Geography into 5 balance-based groups using `NTILE(5)`
+* Calculated the balance difference between each customer and the previous lower-balance customer using `LAG()`
+
+### SQL Concepts Used
+
+* `DENSE_RANK()`
+* `ROW_NUMBER()`
+* `NTILE()`
+* `LAG()`
+* `AVG()`
+* `OVER()`
+* `PARTITION BY`
+* `ORDER BY`
+* Window Functions
+* Ranking and Row Sequencing
+* Customer Benchmarking
+* Geography-wise Analysis
+* Customer Segmentation
+
+### SQL File
+📁 **[View Section 08 — Subqueries & CTEs](sql/08_window_functions.sql)**
+  
 
 ## 📂 Project Structure
 
