@@ -1,3 +1,16 @@
 -- ============================================================
 -- Section 08 — Window Functions
 -- ============================================================
+
+-- 1. Rank customers within each Geography based on balance.
+WITH geo_rank AS (
+    SELECT
+        *,
+        DENSE_RANK() OVER(
+            PARTITION BY Geography
+            ORDER BY Balance DESC
+        ) AS ranked
+    FROM churn_bank
+)
+SELECT *
+FROM geo_rank;
