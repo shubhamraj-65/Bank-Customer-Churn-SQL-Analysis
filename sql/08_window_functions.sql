@@ -134,3 +134,16 @@ SELECT
         PARTITION BY Geography
     ) AS balance_difference
 FROM churn_bank;
+
+-- 11. Divide customers within each Geography into 5 equal groups
+-- using NTILE(5) based on balance.
+SELECT
+    CustomerId,
+    Geography,
+    Age,
+    Balance,
+    NTILE(5) OVER(
+        PARTITION BY Geography
+        ORDER BY Balance
+    ) AS balance_group
+FROM churn_bank;
