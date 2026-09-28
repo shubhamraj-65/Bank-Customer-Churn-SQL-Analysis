@@ -40,3 +40,18 @@ FROM (
     FROM churn_bank
 ) AS ranked_customers
 WHERE row_num <= 3;
+
+-- 4. Find the top 3 customers with the highest credit score in each Geography.
+WITH credit_rank AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER(
+            PARTITION BY Geography
+            ORDER BY CreditScore DESC
+        ) AS row_num
+    FROM churn_bank
+)
+SELECT *
+FROM credit_rank
+WHERE row_num <= 3;
+
