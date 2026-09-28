@@ -14,3 +14,17 @@ WITH geo_rank AS (
 )
 SELECT *
 FROM geo_rank;
+
+-- 2. Rank customers within each Geography based on credit score.
+WITH credit_rank AS (
+    SELECT
+        *,
+        DENSE_RANK() OVER(
+            PARTITION BY Geography
+            ORDER BY CreditScore DESC
+        ) AS ranked
+    FROM churn_bank
+)
+SELECT *
+FROM credit_rank;
+
