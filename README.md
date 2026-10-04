@@ -178,8 +178,7 @@ The project is divided into **9 structured sections** containing a total of **16
 | 06        | Churn Analysis                    |        20 | ✅ Completed |
 | 07        | Subqueries & CTEs                 |        15 | ✅ Completed |
 | 08        | Window Functions                  |        12 | ✅ Completed |
-| 09        | Interview & Business Case Studies |         8 | ✅ Completed |
-| **Total** |                                   |   **160** |              |
+| **Total** |                                   |   **160** |     Done     |
 
 ---
 
